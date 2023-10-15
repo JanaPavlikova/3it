@@ -1,0 +1,232 @@
+html,
+body {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: small;
+  vertical-align: top;
+  background-color: #e3e3e3;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+div {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* pro horni tlacitka v seznamu zaznamu*/
+div.panel{
+    position:fixed;
+}
+/* pro seznam zaznamu*/
+div.list{
+    padding-top: 80px;
+}
+
+table {
+  width: 100%;
+  font-size: small;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border: 1px solid #c3c3c3;
+  background-color: #e3e3e3;
+}
+
+/* pro horni tlacitka v seznamu zaznamu*/
+table.myhead {
+  background-color: #3da3e6;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* radek tabulky - v seznamu sudy radek */
+tr.suda {
+  background-color: #c4e7ff;
+}
+tr.suda:hover {
+  background-color: #d3d3d3;
+}
+
+/* radek tabulky - v seznamu lichy radek */
+tr.licha {
+  background-color: #edffff;
+}
+tr.licha:hover {
+  background-color: #d3d3d3;
+}
+
+/* radek tabulky - v seznamu oznaceny */
+tr.marked {
+  background-color: #0a94f0;
+}
+tr.marked:hover {
+  background-color: #4666f3;
+}
+
+td {
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 5;
+  padding-right: 5;
+}
+
+/* bunka v tabulce - text centrovany */
+td.center {
+  text-align: center;
+}
+
+/* bunka v tabulce -  pro tlacitka*/
+td.myhead {
+  height: 35;
+  width: 120;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  background: #41c9f4;
+  background: -moz-linear-gradient(top, #41c9f4 0%, #2f92b2 46%, #0044a2 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #41c9f4 0%,
+    #2f92b2 46%,
+    #0044a2 100%
+  );
+  background: linear-gradient(to bottom, #41c9f4 0%, #2f92b2 46%, #0044a2 100%);
+}
+td.myhead:hover {
+  background-color: #0044a2;
+  background: #0044a2;
+  background: -moz-linear-gradient(left, #0044a2 0%, #0044a2 50%, #0044a2 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #0044a2 0%,
+    #0044a2 50%,
+    #0044a2 100%
+  );
+  background: linear-gradient(to right, #0044a2 0%, #0044a2 50%, #0044a2 100%);
+  cursor: pointer;
+}
+
+/* bunka v tabulce - pro DISABLE tlacitka */
+td.myheaddisable {
+  height: 35;
+  width: 120;
+  background-color: #3da3e6;
+  text-align: center;
+  color: #ffffff;
+  background: #41c9f4;
+  background: -moz-linear-gradient(top, #41c9f4 0%, #2f92b2 46%, #0044a2 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #41c9f4 0%,
+    #2f92b2 46%,
+    #0044a2 100%
+  );
+  background: linear-gradient(to bottom, #41c9f4 0%, #2f92b2 46%, #0044a2 100%);
+}
+td.myheaddisable:hover {
+  cursor: not-allowed;
+}
+
+th {
+  background-color: #3da3e6;
+  color: #edffff;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: left;
+  height: 35;
+  padding-left: 2;
+  padding-right: 2;
+}
+
+/* nadpis v tabulce - text centrovany */
+th.center {
+  text-align: center;
+}
+
+/* vstupni pole typu text - zakladni nastaveni */
+input {
+  height: 20px;
+  color: #000000;
+}
+
+/* odkaz - pouzivany v nadpisech seznamu (trideni) */
+a.head {
+  color: #edffff;
+  text-decoration: underline;
+}
+
+/* SEKCE NEVIM ASI PRIJDE PRYC */
+input[type="file"] {
+  display: none;
+}
+
+/* formatovani nadpisu */
+h2 {
+  color: #0044a2;
+}
+h3 {
+  font-size: large;
+  font-weight: bold;
+  color: #0044a2;
+}
+
+/* ZONA PRO NASTAVENI VRTIELKY */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #0044a2;
+  border-bottom: 16px solid #0044a2;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  display: none;
+  margin-top: 100px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*ZONA pro drag and drop */
+#drop_file_zone_import {
+    align-content: center;
+    background-color: #ffffff;
+    border: #808080 5px dashed;
+    width: 60%;
+    height: 100px;
+    padding: 2px;
+    font-size: small;
+    margin: auto;
+  }
+  #drag_upload_file_import {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #drag_upload_file_import p {
+    text-align: center;
+  }
+  #drag_upload_file_import #selectfile_import {
+    display: none;
+  }
+  
+  
